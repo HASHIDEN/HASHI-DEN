@@ -41,6 +41,52 @@
     .gallery-item { background: #f9f9f9; border-radius: 10px; overflow: hidden; border: 1px solid #eee; }
     .gallery-img { width: 100%; height: 180px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999; }
     .gallery-text { padding: 15px; font-size: 14px; font-weight: bold; }
+    /* モバイル（スマホ）用の調整設定 */
+@media (max-width: 640px) {
+  /* 1. ヘッダーの高さを少し抑える */
+  .site-header {
+    height: 60px;
+    padding: 0 15px;
+  }
+  .logo img {
+    height: 32px; /* ロゴを少し小さく */
+  }
+  .tel-num {
+    font-size: 14px; /* 電話番号を一行に収める */
+  }
+
+  /* 2. メインの文字サイズを調整 */
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-title {
+    font-size: 30px; /* 文字をスマホサイズに小さく */
+    line-height: 1.3;
+  }
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  /* 3. ボタンの大きさを調整 */
+  .hero-btn {
+    width: 100%; /* ボタンを横いっぱいに広げて押しやすくする */
+    justify-content: center;
+    padding: 12px;
+    font-size: 14px;
+    margin-left: 0 !important;
+    margin-top: 10px;
+  }
+
+  /* 4. 比較表の文字を小さくして読みやすく */
+  table {
+    font-size: 12px !important;
+  }
+  th, td {
+    padding: 10px 5px !important;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -81,66 +127,9 @@
       </div>
     </div>
   </section>
-  <section style="padding: 60px 5%; background: #f9f9f9;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 26px;">他社との比較でわかる、橋本電設の強み</h2>
+   
     
-    <div style="max-width: 900px; margin: 0 auto; overflow-x: auto;">
-        <table style="width: 100%; border-collapse: separate; border-spacing: 5px 0; text-align: center; min-width: 600px;">
-            <thead>
-                <tr>
-                    <th style="width: 20%;"></th>
-                    <th style="background: #333; color: #f2c94c; padding: 20px 10px; border-radius: 15px 15px 0 0; font-size: 18px; border: 3px solid #333;">
-                        橋本電設
-                    </th>
-                    <th style="padding: 20px 10px; color: #666; font-size: 14px;">大手メーカー・量販店</th>
-                    <th style="padding: 20px 10px; color: #666; font-size: 14px;">地元の他社</th>
-                </tr>
-            </thead>
-            <tbody style="font-weight: bold;">
-                <!-- 基本料金 -->
-                <tr>
-                    <td style="padding: 20px; background: #eee; border-bottom: 2px solid #fff;">基本料金</td>
-                    <td style="border-left: 3px solid #333; border-right: 3px solid #333; padding: 20px; color: #b58c16; font-size: 22px;">¥5,000〜</td>
-                    <td style="padding: 20px; color: #999;">¥12,000〜</td>
-                    <td style="padding: 20px; color: #999;">¥8,000〜</td>
-                </tr>
-                <!-- 出張費 -->
-                <tr>
-                    <td style="padding: 20px; background: #eee; border-bottom: 2px solid #fff;">出張費</td>
-                    <td style="border-left: 3px solid #333; border-right: 3px solid #333; padding: 20px; color: #b58c16; font-size: 22px;">0円<br><small style="font-size: 10px;">(町内エリア)</small></td>
-                    <td style="padding: 20px; color: #999;">¥3,000〜</td>
-                    <td style="padding: 20px; color: #999;">¥2,000〜</td>
-                </tr>
-                <!-- 対応スピード -->
-                <tr>
-                    <td style="padding: 20px; background: #eee; border-bottom: 2px solid #fff;">対応速度</td>
-                    <td style="border-left: 3px solid #333; border-right: 3px solid #333; padding: 20px; font-size: 24px;">◎<br><small style="font-size: 10px;">最短30分</small></td>
-                    <td style="padding: 20px; font-size: 24px;">△<br><small style="font-size: 10px;">数日後〜</small></td>
-                    <td style="padding: 20px; font-size: 24px;">○<br><small style="font-size: 10px;">当日〜翌日</small></td>
-                </tr>
-                <!-- 施工 -->
-                <tr>
-                    <td style="padding: 20px; background: #eee; border-bottom: 2px solid #fff;">施工担当</td>
-                    <td style="border-left: 3px solid #333; border-right: 3px solid #333; padding: 20px;">自社施工<br><small style="font-size: 10px;">(顔が見える安心)</small></td>
-                    <td style="padding: 20px; color: #999;">下請け業者</td>
-                    <td style="padding: 20px; color: #999;">自社施工</td>
-                </tr>
-                <!-- 総合コスト -->
-                <tr>
-                    <td style="padding: 20px; background: #eee; border-radius: 0 0 0 15px;">総合コスト</td>
-                    <td style="border-left: 3px solid #333; border-right: 3px solid #333; border-bottom: 3px solid #333; padding: 30px; border-radius: 0 0 15px 15px;">
-                        <span style="font-size: 32px; color: #e74c3c;">💮</span>
-                    </td>
-                    <td style="padding: 20px; font-size: 24px;">△</td>
-                    <td style="padding: 20px; font-size: 24px;">○</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <p style="text-align: center; margin-top: 30px; font-size: 14px; color: #666;">
-        ※無駄な広告費や中間マージンをカットしているため、高品質な施工を低価格で提供可能です。
-    </p>
-</section>
+
 <section style="padding: 60px 10%; background: #fff;">
     <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
         <!-- 代表写真（仮の丸い枠） -->
